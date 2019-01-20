@@ -47,7 +47,7 @@ collections:
         label: "Resume"
         name: "resume"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "resume-page"}
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
     
