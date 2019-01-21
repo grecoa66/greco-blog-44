@@ -1,5 +1,5 @@
 ---
-templateKey: about-page
+templateKey: resume-page
 title: My Resume
 jobTitle:
   - company: Harry's
