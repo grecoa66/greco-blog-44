@@ -51,3 +51,4 @@ collections:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Intro", name: "intro", widget: "markdown"}
           - {label: "Job Title", name: "jobTitle", widget: list, fields: [{label: Company, name: company, widget: string}, {label: Positon, name: position, widget: string}, {label: "Employment Dates", name: employmentDates, widget: string}, {label: Description, name: description, widget: string}]}
+          - {label: "Education", name: "education", widget: list, fields: [{label: School, name: school, widget: string}, {label: Degree, name: degree, widget: string}]}
