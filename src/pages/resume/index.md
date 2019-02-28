@@ -1,6 +1,7 @@
 ---
 templateKey: resume
 title: My Resume
+intro: 'Hey, I''m Alex Greco'
 jobTitle:
   - company: Harry's
     employmentDates: June 2018 - Current
@@ -11,6 +12,8 @@ jobTitle:
   - company: Billtrust
     employmentDates: May 2015 - December 2015
     position: Web Development Intern
+education:
+  - degree: Computer Science
+    school: Rowan University
 ---
-### Alex Greco - Software Engineer
-I am Alex Greco from the greater New York area. I am a software engineer specializing in frontend development.
+
