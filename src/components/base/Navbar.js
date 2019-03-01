@@ -8,12 +8,9 @@ const Navbar = class extends React.Component {
     return (
       <nav role="navigation" aria-label="main-navigation">
         <div className="navbar-start has-text-centered">
-          <Link className="navbar-item" to="/">
-            Home
-          </Link>
-          <Link className="navbar-item" to="/resume">
-            Resume
-          </Link>
+          <Link to="/">Home</Link>
+          <Link to="/resume">Resume</Link>
+          <Link to="/about">About</Link>
         </div>
       </nav>
     );

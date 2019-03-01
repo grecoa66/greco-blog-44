@@ -5,7 +5,7 @@ import { graphql } from "gatsby";
 import Layout from "../components/base/Layout";
 import JobTitle from "../components/resume/JobTitle";
 
-export const ResumePageTemplate = ({ jobs, title }) => {
+const ResumePageTemplate = ({ jobs, title }) => {
   console.log("jobs : ", jobs);
   return (
     <section className="content">
