@@ -6,7 +6,7 @@ const AboutPageWrapper = styled.div`
   background-color: white;
   height: 100%;
   width: auto;
-  border-radius: 1px solid red;
+  border: 1px solid red;
 `;
 
 const AboutPage = () => {

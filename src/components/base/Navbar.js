@@ -1,20 +1,30 @@
 import React from "react";
 import { Link } from "gatsby";
+import styled from "styled-components";
 
-const Navbar = class extends React.Component {
-  componentDidMount() {}
+const StyledNav = styled.div`
+  display: flex;
+  height: 4vh;
+`;
 
-  render() {
-    return (
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+`;
+
+const Navbar = () => {
+  return (
+    <StyledNav>
       <nav role="navigation" aria-label="main-navigation">
-        <div className="navbar-start has-text-centered">
-          <Link to="/">Home</Link>
-          <Link to="/resume">Resume</Link>
-          <Link to="/about">About</Link>
+        <div>
+          <StyledLink to="/">Home</StyledLink>
+          <StyledLink to="/resume">Resume</StyledLink>
+          <StyledLink to="/about">About</StyledLink>
         </div>
       </nav>
-    );
-  }
+    </StyledNav>
+  );
 };
 
 export default Navbar;

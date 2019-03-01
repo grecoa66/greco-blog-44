@@ -29,7 +29,7 @@ const TemplateWrapper = ({ children }) => (
         </Helmet>
         <StyledLayout>
           <Navbar />
-          <div className="body-section">{children}</div>
+          <div className="">{children}</div>
         </StyledLayout>
       </div>
     )}
