@@ -5,6 +5,7 @@ import Block from "./BaseBlock";
 const StyledBlock = styled(Block)`
   background-color: violet;
   justify-content: center;
+  padding: 25px;
 `;
 
 const CenteredBlock = props => {

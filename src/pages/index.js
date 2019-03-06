@@ -4,6 +4,7 @@ import { graphql } from "gatsby";
 import Layout from "../components/base/Layout";
 import Row from "../components/base/Row";
 import CenteredBlock from "../components/base/blocks/CenteredBlock";
+import BaseBlock from "../components/base/blocks/BaseBlock";
 
 export default class IndexPage extends React.Component {
   render() {
@@ -17,6 +18,9 @@ export default class IndexPage extends React.Component {
           <CenteredBlock colStart="3" colEnd="5">
             Hello
           </CenteredBlock>
+          <BaseBlock colStart="1" colEnd="5">
+            Base
+          </BaseBlock>
         </Row>
       </Layout>
     );

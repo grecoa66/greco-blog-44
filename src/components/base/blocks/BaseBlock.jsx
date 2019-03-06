@@ -8,9 +8,10 @@ const GridBlock = styled.div`
   grid-column: ${props => props.colStart + "/" + props.colEnd || "1/12"};
 `;
 
-const Block = ({ children, colStart, colEnd }) => {
+// className comes from wrapper components
+const Block = ({ children, colStart, colEnd, className }) => {
   return (
-    <GridBlock colStart={colStart} colEnd={colEnd}>
+    <GridBlock colStart={colStart} colEnd={colEnd} className={className}>
       {children}
     </GridBlock>
   );
@@ -19,7 +20,8 @@ const Block = ({ children, colStart, colEnd }) => {
 Block.propTypes = {
   children: PropTypes.any,
   colStart: PropTypes.string,
-  colEnd: PropTypes.string
+  colEnd: PropTypes.string,
+  className: PropTypes.string
 };
 
 export default Block;
