@@ -9,16 +9,23 @@ const GridRow = styled.div`
     repeat(12, [col-start] minmax(10px, 68px) [col-end])
     auto [right];
   grid-column-gap: 10px;
-  background-color: grey;
+  background-color: ${props => props.backgroundColor || "none"};
+  padding: ${props => props.padding || 0}px;
   min-height: 100px;
 `;
 
-const Row = ({ children }) => {
-  return <GridRow>{children}</GridRow>;
+const Row = ({ children, backgroundColor, padding }) => {
+  return (
+    <GridRow backgroundColor={backgroundColor} padding={padding}>
+      {children}
+    </GridRow>
+  );
 };
 
 Row.propTypes = {
-  children: PropTypes.any
+  children: PropTypes.any,
+  backgroundColor: PropTypes.string,
+  padding: PropTypes.number
 };
 
 export default Row;

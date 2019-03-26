@@ -2,7 +2,7 @@ import React from "react";
 import Helmet from "react-helmet";
 import { StaticQuery, graphql } from "gatsby";
 import StyledLayout from "./StyledLayout";
-
+import PropTypes from "prop-types";
 import Navbar from "./Navbar";
 
 const TemplateWrapper = ({ children }) => (
@@ -35,5 +35,9 @@ const TemplateWrapper = ({ children }) => (
     )}
   />
 );
+
+TemplateWrapper.propTypes = {
+  children: PropTypes.any
+};
 
 export default TemplateWrapper;

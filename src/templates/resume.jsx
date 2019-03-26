@@ -1,12 +1,11 @@
 /* eslint-disable */
-import React from "react";
-import PropTypes from "prop-types";
-import { graphql } from "gatsby";
-import Layout from "../components/base/Layout";
-import JobTitle from "../components/resume/JobTitle";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { graphql } from 'gatsby';
+import Layout from '../components/base/Layout';
+import JobTitle from '../components/resume/JobTitle';
 
 const ResumePageTemplate = ({ jobs, title }) => {
-  console.log("jobs : ", jobs);
   return (
     <section className="content">
       <h2>{title}</h2>
@@ -25,7 +24,6 @@ ResumePageTemplate.propTypes = {
 const Resume = ({ data }) => {
   const { markdownRemark } = data;
   const { jobTitle, title } = markdownRemark.frontmatter;
-  console.log("Remark in resume", data);
   return (
     <Layout>
       <ResumePageTemplate jobs={jobTitle} title={title} />

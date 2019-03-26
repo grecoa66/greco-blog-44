@@ -8,20 +8,14 @@ import BaseBlock from "../components/base/blocks/BaseBlock";
 
 export default class IndexPage extends React.Component {
   render() {
-    const { data } = this.props;
-    // console.log("Data: ", data);
-
     return (
       <Layout>
-        <h1>Hello! This is the index page.</h1>
         <Row>
-          <CenteredBlock colStart="3" colEnd="5">
-            Hello
+          <CenteredBlock colStart={2} colEnd={8} w>
+            <h1>Hello! This is the index page.</h1>
           </CenteredBlock>
-          <BaseBlock colStart="1" colEnd="5">
-            Base
-          </BaseBlock>
         </Row>
+        <Row />
       </Layout>
     );
   }
