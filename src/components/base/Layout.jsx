@@ -1,9 +1,11 @@
-import React from "react";
-import Helmet from "react-helmet";
-import { StaticQuery, graphql } from "gatsby";
-import StyledLayout from "./StyledLayout";
-import PropTypes from "prop-types";
-import Navbar from "./Navbar";
+import React from 'react';
+import { ThemeProvider } from 'styled-components';
+import Helmet from 'react-helmet';
+import { StaticQuery, graphql } from 'gatsby';
+import PropTypes from 'prop-types';
+import StyledLayout from 'components/base/StyledLayout';
+import Navbar from 'components/base/Navbar';
+import theme, { GlobalStyle } from 'theme/theme';
 
 const TemplateWrapper = ({ children }) => (
   <StaticQuery
@@ -27,6 +29,8 @@ const TemplateWrapper = ({ children }) => (
             content={data.site.siteMetadata.description}
           />
         </Helmet>
+        <ThemeProvider theme={theme} />
+        <GlobalStyle />
         <StyledLayout>
           <Navbar />
           <div className="">{children}</div>

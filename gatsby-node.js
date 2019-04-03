@@ -1,7 +1,5 @@
-const _ = require("lodash");
 const path = require("path");
 const { createFilePath } = require("gatsby-source-filesystem");
-const { fmImagesToRelative } = require("gatsby-remark-relative-images");
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
@@ -28,7 +26,7 @@ exports.createPages = ({ actions, graphql }) => {
     const pages = result.data.allMarkdownRemark.edges;
 
     pages.forEach(edge => {
-      const id = edge.node.id;
+      const { id } = edge.node;
       createPage({
         path: edge.node.fields.slug,
         component: path.resolve(
@@ -53,4 +51,12 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       value: slug
     });
   }
+};
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    resolve: {
+      modules: [path.resolve(__dirname, "./src"), "node_modules"],
+      extensions: [".js", ".jsx", ".json"]
+    }
+  });
 };

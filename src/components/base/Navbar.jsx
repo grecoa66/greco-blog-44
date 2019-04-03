@@ -5,6 +5,7 @@ import styled from 'styled-components';
 const StyledNav = styled.div`
   display: flex;
   height: 4vh;
+  position: sticky;
 `;
 
 const StyledLink = styled(Link)`

@@ -6,11 +6,8 @@
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
     "bulma": "^0.7.0",
-    "eslint": "^5.14.1",
+    "eslint-config-airbnb": "^17.1.0",
     "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-config-prettier": "^4.1.0",
-    "eslint-plugin-import": "^2.16.0",
-    "eslint-plugin-prettier": "^3.0.1",
     "gatsby": "^2.0.66",
     "gatsby-image": "^2.0.23",
     "gatsby-plugin-layout": "^1.0.12",
@@ -20,7 +17,7 @@
     "gatsby-plugin-react-helmet": "^3.0.4",
     "gatsby-plugin-sass": "^2.0.7",
     "gatsby-plugin-sharp": "^2.0.15",
-    "gatsby-plugin-styled-components": "^3.0.6",
+    "gatsby-plugin-styled-components": "^3.0.7",
     "gatsby-remark-copy-linked-files": "^2.0.7",
     "gatsby-remark-images": "^3.0.1",
     "gatsby-remark-relative-images": "^0.2.1",
@@ -55,8 +52,13 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "eslint": "^5.15.3",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-import-resolver-webpack": "^0.11.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.12.4",
-    "prettier": "1.16.4",
+    "prettier": "^1.16.4",
     "rimraf": "^2.6.2"
   }
 }

@@ -34,8 +34,8 @@ const Block = ({ children, colStart, colEnd, className, backgroundColor }) => {
 
 Block.propTypes = {
   children: PropTypes.any,
-  colStart: PropTypes.string,
-  colEnd: PropTypes.string,
+  colStart: PropTypes.any,
+  colEnd: PropTypes.any,
   className: PropTypes.string,
   backgroundColor: PropTypes.string
 };
