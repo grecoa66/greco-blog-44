@@ -2,8 +2,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
-import Layout from '../components/base/Layout';
-import JobTitle from '../components/resume/JobTitle';
+import Layout from 'components/base/Layout';
+import JobTitle from 'components/resume/JobTitle';
 
 const ResumePageTemplate = ({ jobs, title }) => {
   return (

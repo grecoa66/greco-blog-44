@@ -4,13 +4,19 @@ import styled from 'styled-components';
 
 const StyledNav = styled.div`
   display: flex;
-  height: 4vh;
+  top: 0;
+  height: 8vh;
+  width: 100%;
   position: sticky;
+  justify-content: flex-start;
+  align-items: center;
+
+  background-color: ${props => props.theme.colors['primaryAccent']};
 `;
 
 const StyledLink = styled(Link)`
   text-decoration: none;
-  color: black;
+  color: ${props => props.theme.colors['black']};
   padding: 5px;
 `;
 

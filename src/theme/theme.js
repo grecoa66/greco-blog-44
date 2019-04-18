@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { OpenSansRegular } from 'src/fonts/OpenSans';
 
 export const GlobalStyle = createGlobalStyle`
   * {
@@ -17,17 +18,24 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
+    font-family: OpenSansRegular.ttf, sans-serif;
   }
 
 `;
 const theme = {
   colors: {
-    black: '#fff',
-    white: '#000',
+    black: '#000',
+    white: '#fff',
     primaryBackground: '#e4f9f5',
     primaryAccent: '#30e3ca',
     secondaryAccent: '#11999e',
     darkAccent: '#40514e'
+  },
+  zindex: {
+    base: 1,
+    headerFooter: 1000,
+    hero: 100,
+    content: 500
   }
 };
 

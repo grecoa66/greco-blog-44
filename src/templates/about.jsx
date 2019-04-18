@@ -1,6 +1,6 @@
-import React from "react";
-import Layout from "../components/base/Layout";
-import styled from "styled-components";
+import React from 'react';
+import Layout from 'components/base/Layout';
+import styled from 'styled-components';
 
 const AboutPageWrapper = styled.div`
   background-color: white;

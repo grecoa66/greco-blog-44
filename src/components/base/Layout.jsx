@@ -29,12 +29,15 @@ const TemplateWrapper = ({ children }) => (
             content={data.site.siteMetadata.description}
           />
         </Helmet>
-        <ThemeProvider theme={theme} />
-        <GlobalStyle />
-        <StyledLayout>
-          <Navbar />
-          <div className="">{children}</div>
-        </StyledLayout>
+        <ThemeProvider theme={theme}>
+          <div>
+            <GlobalStyle />
+            <StyledLayout>
+              <Navbar />
+              <div className="">{children}</div>
+            </StyledLayout>
+          </div>
+        </ThemeProvider>
       </div>
     )}
   />
