@@ -8,17 +8,13 @@ const StyledBlock = styled(BaseBlock)`
 
 const StyledImage = styled.img`
   object-fit: cover;
-
   height: auto;
-  ${props => console.log(props)}
 `;
 
-const ImageBlock = ({ imgSrc, ...props }) => {
-  console.log('Image Block: ', props);
-  return (
-    <StyledBlock {...props}>
-      <StyledImage src={imgSrc} />
-    </StyledBlock>
-  );
-};
+const ImageBlock = ({ imgSrc, ...props }) => (
+  <StyledBlock {...props}>
+    <StyledImage src={imgSrc} />
+  </StyledBlock>
+);
+
 export default ImageBlock;

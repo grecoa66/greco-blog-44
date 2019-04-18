@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
-import Layout from 'components/base/Layout';
+
 import JobTitle from 'components/resume/JobTitle';
 
 const ResumePageTemplate = ({ jobs, title }) => {
@@ -24,11 +24,7 @@ ResumePageTemplate.propTypes = {
 const Resume = ({ data }) => {
   const { markdownRemark } = data;
   const { jobTitle, title } = markdownRemark.frontmatter;
-  return (
-    <Layout>
-      <ResumePageTemplate jobs={jobTitle} title={title} />
-    </Layout>
-  );
+  return <ResumePageTemplate jobs={jobTitle} title={title} />;
 };
 
 export default Resume;

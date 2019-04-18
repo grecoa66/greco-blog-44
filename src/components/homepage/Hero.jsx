@@ -5,7 +5,7 @@ import HeroTitle from 'components/homepage/HeroTitle';
 const HeroWrapper = styled.section`
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: ${props => props.theme.zindex['hero']};
   position: relative;
   width: 100%;
   height: 50vh;
@@ -17,16 +17,13 @@ const StyledImage = styled.img`
   height: inherit;
   object-fit: cover;
   overflow: hidden;
-  ${props => console.log(props)}
 `;
 
-const Hero = ({ imgSrc, ...props }) => {
-  console.log('Image Block: ', props);
-  return (
-    <HeroWrapper>
-      <StyledImage src={imgSrc} />
-      <HeroTitle>Alexander K. Greco</HeroTitle>
-    </HeroWrapper>
-  );
-};
+const Hero = ({ imgSrc, ...props }) => (
+  <HeroWrapper>
+    <StyledImage src={imgSrc} />
+    <HeroTitle>Alexander K. Greco</HeroTitle>
+  </HeroWrapper>
+);
+
 export default Hero;

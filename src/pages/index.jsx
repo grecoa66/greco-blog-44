@@ -2,10 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Homepage from 'templates/homePageTemplate';
+import Layout from 'components/base/Layout';
+import FontPreloader from 'fonts/FontPreloader';
 
 export default class IndexPage extends React.Component {
   render() {
-    return <Homepage />;
+    return (
+      <Layout>
+        <FontPreloader />
+        <Homepage />
+      </Layout>
+    );
   }
 }
 

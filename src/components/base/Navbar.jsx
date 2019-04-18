@@ -10,7 +10,7 @@ const StyledNav = styled.div`
   position: sticky;
   justify-content: flex-start;
   align-items: center;
-
+  z-index: ${props => props.theme.zindex['headerFooter']};
   background-color: ${props => props.theme.colors['primaryAccent']};
 `;
 

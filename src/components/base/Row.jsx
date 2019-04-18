@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import PropTypes from "prop-types";
+import React from 'react';
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const GridRow = styled.div`
   display: grid;
@@ -9,10 +9,10 @@ const GridRow = styled.div`
     repeat(12, [col-start] minmax(10px, 60px) [col-end])
     auto [right];
   grid-column-gap: 10px;
-  background-color: ${props => props.backgroundColor || "none"};
+  background-color: ${props => props.backgroundColor || 'none'};
   padding: ${props => props.padding || 0}px;
   min-height: 100px;
-
+  z-index: ${props => props.theme.zindex['row']};
 `;
 
 const Row = ({ children, backgroundColor, padding }) => {

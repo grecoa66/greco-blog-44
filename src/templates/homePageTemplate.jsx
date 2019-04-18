@@ -16,36 +16,66 @@ const AboutPageWrapper = styled.div`
 
 const AboutPage = () => {
   return (
-    <Layout>
+    <>
       <Hero imgSrc={HeroImage} />
       <HomepageContent>
-        <Row backgroundColor={'green'}>
-          <CenteredBlock colStart={1} colEnd={5}>
-            <h1>Hello! This is the index page.</h1>
-          </CenteredBlock>
-        </Row>
         <Row>
           <CenteredBlock colStart={1} colEnd={5}>
-            <h1>Hello! This is the index page.</h1>
+            <h2>Hello! This is the index page.</h2>
+          </CenteredBlock>
+        </Row>
+        <Row>
+          <CenteredBlock colStart={1} colEnd={5}>
+            <h2>Hello! This is the index page.</h2>
           </CenteredBlock>
         </Row>
         <Row>
           <CenteredBlock colStart={1} colEnd={5} w>
-            <h1>Hello! This is the index page.</h1>
+            <h2>Hello! This is the index page.</h2>
           </CenteredBlock>
         </Row>
         <Row>
           <CenteredBlock colStart={1} colEnd={5} w>
-            <h1>Hello! This is the index page.</h1>
+            <h2>Hello! This is the index page.</h2>
           </CenteredBlock>
         </Row>
         <Row>
           <CenteredBlock colStart={1} colEnd={5} w>
-            <h1>Hello! This is the index page.</h1>
+            <h2>Hello! This is the index page.</h2>
+          </CenteredBlock>
+        </Row>
+        <Row>
+          <CenteredBlock colStart={1} colEnd={5} w>
+            <h2>Hello! This is the index page.</h2>
+          </CenteredBlock>
+        </Row>
+        <Row>
+          <CenteredBlock colStart={1} colEnd={5} w>
+            <h2>Hello! This is the index page.</h2>
+          </CenteredBlock>
+        </Row>
+        <Row>
+          <CenteredBlock colStart={1} colEnd={5} w>
+            <h2>Hello! This is the index page.</h2>
+          </CenteredBlock>
+        </Row>
+        <Row>
+          <CenteredBlock colStart={1} colEnd={5} w>
+            <h2>Hello! This is the index page.</h2>
+          </CenteredBlock>
+        </Row>
+        <Row>
+          <CenteredBlock colStart={1} colEnd={5} w>
+            <h2>Hello! This is the index page.</h2>
+          </CenteredBlock>
+        </Row>
+        <Row>
+          <CenteredBlock colStart={1} colEnd={5} w>
+            <h2>Hello! This is the index page.</h2>
           </CenteredBlock>
         </Row>
       </HomepageContent>
-    </Layout>
+    </>
   );
 };
 
