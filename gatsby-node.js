@@ -27,6 +27,7 @@ exports.createPages = ({ actions, graphql }) => {
 
     pages.forEach(edge => {
       const { id } = edge.node;
+      console.log('Gatsby ID: ', edge.node);
       createPage({
         path: edge.node.fields.slug,
         component: path.resolve(

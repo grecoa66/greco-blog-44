@@ -5,28 +5,34 @@ import Homepage from 'templates/homePageTemplate';
 import Layout from 'components/base/Layout';
 import FontPreloader from 'fonts/FontPreloader';
 
-export default class IndexPage extends React.Component {
-  render() {
-    const { data } = this.props;
-    const { edges: homepageContent } = data.allMarkdownRemark;
-    return (
-      <Layout>
-        <FontPreloader />
-        {homepageContent.map(content => {
-          const { heroText, subHeroText } = content.node.frontmatter;
-          return (
-            <Homepage
-              key={heroText}
-              heroText={heroText}
-              subHeroText={subHeroText}
-            />
-          );
-        })}
-        ;
-      </Layout>
-    );
-  }
-}
+const IndexTemplate = ({ heroText, subHeroText, homepageBlurb }) => {
+  return (
+    <Layout>
+      <FontPreloader />
+      <Homepage
+        key={heroText}
+        heroText={heroText}
+        subHeroText={subHeroText}
+        homepageBlurb={homepageBlurb}
+      />
+    </Layout>
+  );
+};
+
+const IndexPage = ({ data }) => {
+  const {
+    heroText,
+    subHeroText,
+    homepageBlurb
+  } = data.allMarkdownRemark.edges[0].node.frontmatter;
+  return (
+    <IndexTemplate
+      heroText={heroText}
+      subHeroText={subHeroText}
+      homepageBlurb={homepageBlurb}
+    />
+  );
+};
 
 IndexPage.propTypes = {
   data: PropTypes.shape({
@@ -35,6 +41,8 @@ IndexPage.propTypes = {
     })
   })
 };
+
+export default IndexPage;
 
 export const pageQuery = graphql`
   query IndexQuery {
@@ -46,6 +54,9 @@ export const pageQuery = graphql`
           frontmatter {
             heroText
             subHeroText
+            homepageBlurb {
+              blurbText
+            }
           }
         }
       }

@@ -14,66 +14,19 @@ const AboutPageWrapper = styled.div`
   border: 1px solid red;
 `;
 
-const HomePage = ({ heroText, subHeroText }) => {
+const HomePage = ({ heroText, subHeroText, homepageBlurb }) => {
+  console.log(homepageBlurb);
   return (
     <>
       <Hero imgSrc={HeroImage} heroText={heroText} subHeroText={subHeroText} />
       <HomepageContent>
-        <Row>
-          <CenteredBlock colStart={1} colEnd={5}>
-            <h2>Hello! This is the index page.</h2>
-          </CenteredBlock>
-        </Row>
-        <Row>
-          <CenteredBlock colStart={1} colEnd={5}>
-            <h2>Hello! This is the index page.</h2>
-          </CenteredBlock>
-        </Row>
-        <Row>
-          <CenteredBlock colStart={1} colEnd={5} w>
-            <h2>Hello! This is the index page.</h2>
-          </CenteredBlock>
-        </Row>
-        <Row>
-          <CenteredBlock colStart={1} colEnd={5} w>
-            <h2>Hello! This is the index page.</h2>
-          </CenteredBlock>
-        </Row>
-        <Row>
-          <CenteredBlock colStart={1} colEnd={5} w>
-            <h2>Hello! This is the index page.</h2>
-          </CenteredBlock>
-        </Row>
-        <Row>
-          <CenteredBlock colStart={1} colEnd={5} w>
-            <h2>Hello! This is the index page.</h2>
-          </CenteredBlock>
-        </Row>
-        <Row>
-          <CenteredBlock colStart={1} colEnd={5} w>
-            <h2>Hello! This is the index page.</h2>
-          </CenteredBlock>
-        </Row>
-        <Row>
-          <CenteredBlock colStart={1} colEnd={5} w>
-            <h2>Hello! This is the index page.</h2>
-          </CenteredBlock>
-        </Row>
-        <Row>
-          <CenteredBlock colStart={1} colEnd={5} w>
-            <h2>Hello! This is the index page.</h2>
-          </CenteredBlock>
-        </Row>
-        <Row>
-          <CenteredBlock colStart={1} colEnd={5} w>
-            <h2>Hello! This is the index page.</h2>
-          </CenteredBlock>
-        </Row>
-        <Row>
-          <CenteredBlock colStart={1} colEnd={5} w>
-            <h2>Hello! This is the index page.</h2>
-          </CenteredBlock>
-        </Row>
+        {homepageBlurb.map(blurbs => (
+          <Row>
+            <CenteredBlock colStart={2} colEnd={11}>
+              <p>{blurbs.blurbText}</p>
+            </CenteredBlock>
+          </Row>
+        ))}
       </HomepageContent>
     </>
   );

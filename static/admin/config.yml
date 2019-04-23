@@ -17,6 +17,7 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden"}
           - {label: "Hero Text", name: "heroText", widget: "string"}
           - {label: "Sub Hero Text", name: "subHeroText", widget: "string"}
+          - {label: "Homepage Blurb", name: "homepageBlurb", widget: "list", fields: [{label: "Blurb Text", name: blurbText, widget: string}]}
       - file: "src/pages/resume/index.md"
         label: "Resume"
         name: "resume"
