@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 const Title = styled.div`
   display: flex;
+  flex-direction: column;
   height: inherit;
   justify-content: center;
   align-items: center;
@@ -13,12 +14,17 @@ const Title = styled.div`
     font-size: 5em;
     z-index: inherit;
   }
+  h3 {
+    font-size: 2em;
+    z-index: inherit;
+  }
 `;
 
-const HeroTitle = ({ children }) => {
+const HeroTitle = ({ heroText, subHeroText }) => {
   return (
     <Title>
-      <h1>{children}</h1>
+      <h1>{heroText}</h1>
+      <h3>{subHeroText}</h3>
     </Title>
   );
 };

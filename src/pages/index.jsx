@@ -7,10 +7,22 @@ import FontPreloader from 'fonts/FontPreloader';
 
 export default class IndexPage extends React.Component {
   render() {
+    const { data } = this.props;
+    const { edges: homepageContent } = data.allMarkdownRemark;
     return (
       <Layout>
         <FontPreloader />
-        <Homepage />
+        {homepageContent.map(content => {
+          const { heroText, subHeroText } = content.node.frontmatter;
+          return (
+            <Homepage
+              key={heroText}
+              heroText={heroText}
+              subHeroText={subHeroText}
+            />
+          );
+        })}
+        ;
       </Layout>
     );
   }
@@ -27,12 +39,14 @@ IndexPage.propTypes = {
 export const pageQuery = graphql`
   query IndexQuery {
     allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___title] }
-      filter: { frontmatter: { templateKey: { eq: "resume-page" } } }
+      filter: { frontmatter: { templateKey: { eq: "homePageTemplate" } } }
     ) {
       edges {
         node {
-          id
+          frontmatter {
+            heroText
+            subHeroText
+          }
         }
       }
     }

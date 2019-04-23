@@ -19,10 +19,10 @@ const StyledImage = styled.img`
   overflow: hidden;
 `;
 
-const Hero = ({ imgSrc, ...props }) => (
+const Hero = ({ imgSrc, heroText, subHeroText }) => (
   <HeroWrapper>
     <StyledImage src={imgSrc} />
-    <HeroTitle>Alexander K. Greco</HeroTitle>
+    <HeroTitle heroText={heroText} subHeroText={subHeroText} />
   </HeroWrapper>
 );
 
