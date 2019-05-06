@@ -30,7 +30,6 @@ const TemplateWrapper = ({ children }) => (
             content={data.site.siteMetadata.description}
           />
         </Helmet>
-        {/* <FontPreloader /> */}
         <ThemeProvider theme={theme}>
           <div>
             <GlobalStyle />
