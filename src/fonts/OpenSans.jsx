@@ -1,3 +1,3 @@
 export const OpenSansRegular = {
-  ttf: 'fonts/OpenSans-Regular.ttf'
+  ttf: './assets/fonts/OpenSans-Regular.ttf'
 };

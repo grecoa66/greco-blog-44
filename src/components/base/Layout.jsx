@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import StyledLayout from 'components/base/StyledLayout';
 import Navbar from 'components/base/Navbar';
 import theme, { GlobalStyle } from 'theme/theme';
+import FontPreloader from 'fonts/FontPreloader';
 
 const TemplateWrapper = ({ children }) => (
   <StaticQuery
@@ -29,6 +30,7 @@ const TemplateWrapper = ({ children }) => (
             content={data.site.siteMetadata.description}
           />
         </Helmet>
+        {/* <FontPreloader /> */}
         <ThemeProvider theme={theme}>
           <div>
             <GlobalStyle />

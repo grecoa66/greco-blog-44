@@ -3,12 +3,10 @@ import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Homepage from 'templates/homePageTemplate';
 import Layout from 'components/base/Layout';
-import FontPreloader from 'fonts/FontPreloader';
 
 const IndexTemplate = ({ heroText, subHeroText, homepageBlurb }) => {
   return (
     <Layout>
-      <FontPreloader />
       <Homepage
         key={heroText}
         heroText={heroText}

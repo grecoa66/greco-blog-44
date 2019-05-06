@@ -1,8 +1,17 @@
 import { createGlobalStyle } from 'styled-components';
 import { injectGlobal } from 'styled-components';
-import { OpenSansRegular } from 'src/fonts/OpenSans';
+import { OpenSansRegular } from 'fonts/OpenSans';
 
 export const GlobalStyle = createGlobalStyle`
+
+  @font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(${OpenSansRegular.ttf}) format("truetype")
+  }
+
   * {
     box-sizing: border-box;
   }
@@ -19,15 +28,7 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
-    font-family: OpenSans-Regular, sans-serif;
-  }
-
-  @font-face {
-    font-family: 'OpenSans-Regular';
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: url(${OpenSansRegular.ttf}) format("ttf")
+    font-family: 'Open Sans';
   }
 
 `;
