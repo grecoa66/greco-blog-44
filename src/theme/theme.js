@@ -36,10 +36,10 @@ const theme = {
   colors: {
     black: '#000',
     white: '#fff',
-    primaryBackground: '#e4f9f5',
-    primaryAccent: '#30e3ca',
-    secondaryAccent: '#11999e',
-    darkAccent: '#40514e'
+    primaryBackground: '#DBE4EE',
+    primaryAccent: '#054A91',
+    secondaryAccent: '#C0FDFB',
+    darkAccent: '#64B6AC'
   },
   zindex: {
     base: 1,

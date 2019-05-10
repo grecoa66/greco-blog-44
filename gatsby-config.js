@@ -59,17 +59,6 @@ module.exports = {
         ]
       }
     },
-    // {
-    //   resolve: `gatsby-plugin-prefetch-google-fonts`,
-    //   options: {
-    //     fonts: [
-    //       {
-    //         family: `Open Sans`,
-    //         subsets: [`latin`]
-    //       }
-    //     ]
-    //   }
-    // },
     'gatsby-plugin-netlify' // make sure to keep it last in the array
   ]
 };
