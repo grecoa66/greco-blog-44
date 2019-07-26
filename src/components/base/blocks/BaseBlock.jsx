@@ -7,7 +7,7 @@ const getGridColumns = ({ colStart, colEnd }) => {
     return "left / right";
   }
   const start = colStart === "left" ? colStart : `col-start ${colStart}`;
-  const end = colEnd === "right" ? colEnd : `col-start ${colEnd}`;
+  const end = colEnd === "right" ? colEnd : `col-end ${colEnd}`;
 
   return `${start} / ${end}`;
 };

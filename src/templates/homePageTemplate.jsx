@@ -1,9 +1,8 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Row from 'components/base/Row';
-import styled from 'styled-components';
 import Layout from 'components/base/Layout';
-import HeroImage from 'img/pexels-photo.jpg';
+import styled, { css } from 'styled-components';
 import { CenteredBlock } from 'components/base/blocks';
 import { Hero, HomepageContent } from 'components/homepage';
 
@@ -13,7 +12,11 @@ const TextBlurbs = styled.p`
 
 const HomePage = ({ heroText, subHeroText, homepageBlurb }) => (
   <>
-    <Hero imgSrc={HeroImage} heroText={heroText} subHeroText={subHeroText} />
+    <Hero
+      imgSrc={'img/pexels-photo.jpg'}
+      heroText={heroText}
+      subHeroText={subHeroText}
+    />
     <HomepageContent>
       {homepageBlurb.map(blurbs => (
         <Row key={blurbs.blurbText}>
