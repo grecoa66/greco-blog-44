@@ -16,7 +16,7 @@ const HomePage = ({ heroText, subHeroText, homepageBlurb }) => (
     <Hero imgSrc={HeroImage} heroText={heroText} subHeroText={subHeroText} />
     <HomepageContent>
       {homepageBlurb.map(blurbs => (
-        <Row>
+        <Row key={blurbs.blurbText}>
           <CenteredBlock colStart={2} colEnd={11}>
             <TextBlurbs>{blurbs.blurbText}</TextBlurbs>
           </CenteredBlock>

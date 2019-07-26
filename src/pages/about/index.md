@@ -1,4 +1,5 @@
 ---
 templateKey: about
-bio:
+name: Alex
+bio: This is a bio!
 ---
