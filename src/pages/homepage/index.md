@@ -1,5 +1,5 @@
 ---
-templateKey: homePageTemplate
+templateKey: homePage
 heroText: Alexander K. Greco
 subHeroText: Software Engineer | Harry's inc.
 homepageBlurb:

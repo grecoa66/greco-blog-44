@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 
-
 const StyledNav = styled.div`
   display: flex;
   flex-direction: row;
@@ -22,11 +21,15 @@ const InitialLogo = styled.p`
   align-items: center;
   font-size: 36px;
   color: ${props => props.theme.colors['white']};
-  margin:auto;
+  margin: auto;
   height: 100px;
 
   left: 50%;
   position: absolute;
+`;
+
+const NavOptions = styled.div`
+  display: block;
 `;
 
 const StyledLink = styled(Link)`
@@ -39,11 +42,11 @@ const StyledLink = styled(Link)`
 const Navbar = () => {
   return (
     <StyledNav role="navigation" aria-label="main-navigation">
-      <section>
+      <NavOptions>
         <StyledLink to="/">Home</StyledLink>
         <StyledLink to="/resume">Resume</StyledLink>
         <StyledLink to="/about">About</StyledLink>
-      </section>
+      </NavOptions>
       <InitialLogo>AKG</InitialLogo>
     </StyledNav>
   );

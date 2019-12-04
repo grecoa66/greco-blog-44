@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
-import Homepage from 'templates/homePageTemplate';
+import Homepage from 'templates/homePage';
 import Layout from 'components/base/Layout';
 
 const IndexTemplate = ({ heroText, subHeroText, homepageBlurb }) => {
@@ -45,7 +45,7 @@ export default IndexPage;
 export const pageQuery = graphql`
   query IndexQuery {
     allMarkdownRemark(
-      filter: { frontmatter: { templateKey: { eq: "homePageTemplate" } } }
+      filter: { frontmatter: { templateKey: { eq: "homePage" } } }
     ) {
       edges {
         node {
