@@ -13,10 +13,10 @@ const StyledNav = styled.div`
   padding: 0 40px;
   position: sticky;
   z-index: ${props => props.theme.zindex['headerFooter']};
-  background-color: ${props => props.theme.colors['primaryAccent']};
+  background-color: ${props => props.theme.colors['primaryBackground']};
 `;
 
-const InitialLogo = styled.p`
+const Logo = styled.p`
   display: flex;
   align-items: center;
   font-size: 36px;
@@ -35,7 +35,7 @@ const NavOptions = styled.div`
 const StyledLink = styled(Link)`
   text-decoration: none;
   font-size: 20px;
-  color: ${props => props.theme.colors['white']};
+  color: ${props => props.theme.colors['darkAccent']};
   padding: 5px;
 `;
 
@@ -47,7 +47,7 @@ const Navbar = () => {
         <StyledLink to="/resume">Resume</StyledLink>
         <StyledLink to="/about">About</StyledLink>
       </NavOptions>
-      <InitialLogo>AKG</InitialLogo>
+      <Logo>AKG</Logo>
     </StyledNav>
   );
 };
