@@ -13,14 +13,14 @@ const StyledNav = styled.div`
   padding: 0 40px;
   position: sticky;
   z-index: ${props => props.theme.zindex['headerFooter']};
-  background-color: ${props => props.theme.colors['primaryBackground']};
+  background-color: ${props => props.theme.colors['white']};
 `;
 
 const Logo = styled.p`
   display: flex;
   align-items: center;
   font-size: 36px;
-  color: ${props => props.theme.colors['white']};
+  color: ${props => props.theme.colors['black']};
   margin: auto;
   height: 100px;
 
@@ -35,7 +35,7 @@ const NavOptions = styled.div`
 const StyledLink = styled(Link)`
   text-decoration: none;
   font-size: 20px;
-  color: ${props => props.theme.colors['darkAccent']};
+  color: ${props => props.theme.colors['black']};
   padding: 5px;
 `;
 

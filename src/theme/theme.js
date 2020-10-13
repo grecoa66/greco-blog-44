@@ -39,7 +39,11 @@ const theme = {
     primaryBackground: '#3AAFA9',
     primaryAccent: '#2B7A78',
     secondaryAccent: '#DEF2F1',
-    darkAccent: '#17252A'
+    darkAccent: '#17252A',
+    ash: '#bababa',
+    sky: '#94a8b3',
+    cream: '#dcd3c9',
+    grey: '#dedcde'
   },
   zindex: {
     base: 1,

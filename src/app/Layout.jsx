@@ -8,7 +8,7 @@ import Navbar from 'app/Navbar';
 import FontPreloader from 'fonts/FontPreloader';
 
 const StyledLayout = styled.div`
-  background-color: ${props => props.theme.colors['primaryBackground']};
+  background-color: ${props => props.theme.colors['white']};
   width: 100%;
   height:100%;
   min-height: 100vh;
