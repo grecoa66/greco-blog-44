@@ -4,31 +4,15 @@ import { graphql } from 'gatsby';
 import Homepage from 'templates/homePage';
 import Layout from 'components/base/Layout';
 
-const IndexTemplate = ({ heroText, subHeroText, homepageBlurb }) => {
-  return (
-    <Layout>
-      <Homepage
-        key={heroText}
-        heroText={heroText}
-        subHeroText={subHeroText}
-        homepageBlurb={homepageBlurb}
-      />
-    </Layout>
-  );
-};
-
 const IndexPage = ({ data }) => {
   const {
-    heroText,
-    subHeroText,
-    homepageBlurb
+    firstName, 
+    lastName
   } = data.allMarkdownRemark.edges[0].node.frontmatter;
   return (
-    <IndexTemplate
-      heroText={heroText}
-      subHeroText={subHeroText}
-      homepageBlurb={homepageBlurb}
-    />
+    <Layout>
+      <h1>{`${firstName} ${lastName}`}</h1>
+    </Layout>
   );
 };
 
@@ -50,11 +34,8 @@ export const pageQuery = graphql`
       edges {
         node {
           frontmatter {
-            heroText
-            subHeroText
-            homepageBlurb {
-              blurbText
-            }
+            firstName
+            lastName
           }
         }
       }
