@@ -27,11 +27,15 @@ exports.createPages = ({ actions, graphql }) => {
 
     pages.forEach(edge => {
       const { id } = edge.node;
-      console.log('Gatsby ID: ', edge.node);
+      const { templateKey } = edge.node.frontmatter;
+      // The homepage gets created by being a file in the /pages directory
+      if(templateKey == "homePage"){
+        return null;
+      }
       createPage({
         path: edge.node.fields.slug,
         component: path.resolve(
-          `src/templates/${String(edge.node.frontmatter.templateKey)}.jsx`
+          `src/templates/${String(templateKey)}.jsx`
         ),
         // additional data can be passed via context
         context: {
@@ -64,7 +68,7 @@ exports.onCreateWebpackConfig = ({ actions }) => {
       alias: {
         src: path.resolve(__dirname, 'src/'),
         static: path.resolve(__dirname, 'static/'),
-        components: path.resolve(__dirname, 'src/components/'),
+        app: path.resolve(__dirname, 'src/app/'),
         templates: path.resolve(__dirname, 'src/templates/')
       },
       extensions: ['.js', '.jsx', '.json']

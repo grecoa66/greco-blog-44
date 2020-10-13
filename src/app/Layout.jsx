@@ -1,12 +1,18 @@
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
-import Helmet from 'react-helmet';
+import styled, { ThemeProvider } from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
-import PropTypes from 'prop-types';
-import StyledLayout from 'components/base/StyledLayout';
-import Navbar from 'components/base/Navbar';
 import theme, { GlobalStyle } from 'theme/theme';
+import Helmet from 'react-helmet';
+import PropTypes from 'prop-types';
+import Navbar from 'app/Navbar';
 import FontPreloader from 'fonts/FontPreloader';
+
+const StyledLayout = styled.div`
+  background-color: ${props => props.theme.colors['primaryBackground']};
+  width: 100%;
+  height:100%;
+  min-height: 100vh;
+`;
 
 const TemplateWrapper = ({ children }) => (
   <StaticQuery

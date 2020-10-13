@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import HeroTitle from 'components/hero/HeroTitle';
+import HeroTitle from 'app/hero/HeroTitle';
 
 const HeroWrapper = styled.section`
   position: sticky;

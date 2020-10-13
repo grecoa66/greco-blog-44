@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
-import Homepage from 'templates/homePage';
-import Layout from 'components/base/Layout';
+import Layout from 'app/Layout';
 
 const IndexPage = ({ data }) => {
   const {
