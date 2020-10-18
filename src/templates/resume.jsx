@@ -7,7 +7,7 @@ const ResumePageTemplate = ({ jobs, title }) => {
   return (
     <section className="content">
       <h2>{title}</h2>
-      {jobs.map(job => (
+      {jobs.map((job) => (
         <JobTitle key={job.company} job={job} />
       ))}
     </section>
@@ -16,7 +16,7 @@ const ResumePageTemplate = ({ jobs, title }) => {
 
 ResumePageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
-  jobs: PropTypes.array.isRequired
+  jobs: PropTypes.array.isRequired,
 };
 
 const Resume = ({ data }) => {

@@ -2,15 +2,28 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Layout from 'app/Layout';
+import ImageTwoUp from 'app/ImageTwoUp';
 
 const IndexPage = ({ data }) => {
+  console.log(JSON.stringify(data, null, 2));
   const {
-    firstName, 
-    lastName
+    firstName,
+    lastName,
+    homePagePanels,
   } = data.allMarkdownRemark.edges[0].node.frontmatter;
   return (
     <Layout>
-      <h1>{`${firstName} ${lastName}`}</h1>
+      {homePagePanels.map(panel => {
+        const { text, imgSrc, imgSide } = panel;
+        return (
+          <ImageTwoUp
+            key={imgSrc + text}
+            imgSrc={imgSrc}
+            imgSide={imgSide}
+            text={text}
+          />
+        );
+      })}
     </Layout>
   );
 };
@@ -18,9 +31,9 @@ const IndexPage = ({ data }) => {
 IndexPage.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.array
-    })
-  })
+      edges: PropTypes.array,
+    }),
+  }),
 };
 
 export default IndexPage;
@@ -35,6 +48,11 @@ export const pageQuery = graphql`
           frontmatter {
             firstName
             lastName
+            homePagePanels {
+              imgSrc
+              imgSide
+              text
+            }
           }
         }
       }

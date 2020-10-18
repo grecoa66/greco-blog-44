@@ -31,9 +31,9 @@ const AboutPage = ({ data }) => {
 AboutPage.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.array
-    })
-  })
+      edges: PropTypes.array,
+    }),
+  }),
 };
 
 export default AboutPage;

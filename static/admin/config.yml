@@ -6,17 +6,33 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "pages"
-    label: "Pages"
+  - name: 'pages'
+    label: 'Pages'
     files:
-      - file: "src/pages/homepage/index.md"
-        label: "Homepage"
-        name: "homepage"
-        slug: ""
+      - file: 'src/pages/homepage/index.md'
+        label: 'Homepage'
+        name: 'homepage'
+        slug: ''
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden"}
-          - {label: "First Name", name: "firstName", widget: "string"}
-          - {label: "Last Name", name: "lastName", widget: "string"}
+          - { label: 'Template Key', name: 'templateKey', widget: 'hidden' }
+          - { label: 'First Name', name: 'firstName', widget: 'string' }
+          - { label: 'Last Name', name: 'lastName', widget: 'string' }
+          - {
+              label: 'Home Page Panels',
+              name: 'homePagePanels',
+              widget: 'list',
+              fields:
+                [
+                  { label: 'imgSrc', name: 'imgSrc', widget: 'string' },
+                  { label: 'text', name: 'text', widget: 'string' },
+                  {
+                    label: 'imgSide',
+                    name: 'imgSide',
+                    widget: 'select',
+                    options: ['left', 'right'],
+                  },
+                ],
+            }
       # - file: "src/pages/resume/index.md"
       #   label: "Resume"
       #   name: "resume"

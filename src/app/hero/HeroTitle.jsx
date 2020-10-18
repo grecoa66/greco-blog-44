@@ -7,8 +7,8 @@ const Title = styled.div`
   height: inherit;
   justify-content: center;
   align-items: center;
-  color: ${props => props.theme.colors['white']};
-  z-index: ${props => props.theme.zindex['heroContent']};
+  color: ${(props) => props.theme.colors['white']};
+  z-index: ${(props) => props.theme.zindex['heroContent']};
 
   h1 {
     font-size: 5em;

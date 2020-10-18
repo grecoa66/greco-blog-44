@@ -8,9 +8,9 @@ import Navbar from 'app/Navbar';
 import FontPreloader from 'fonts/FontPreloader';
 
 const StyledLayout = styled.div`
-  background-color: ${props => props.theme.colors['white']};
+  background-color: ${(props) => props.theme.colors['white']};
   width: 100%;
-  height:100%;
+  height: 100%;
   min-height: 100vh;
 `;
 
@@ -26,7 +26,7 @@ const TemplateWrapper = ({ children }) => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <div>
         <Helmet>
           <html lang="en" />
@@ -51,7 +51,7 @@ const TemplateWrapper = ({ children }) => (
 );
 
 TemplateWrapper.propTypes = {
-  children: PropTypes.any
+  children: PropTypes.any,
 };
 
 export default TemplateWrapper;

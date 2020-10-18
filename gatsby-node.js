@@ -29,18 +29,16 @@ exports.createPages = ({ actions, graphql }) => {
       const { id } = edge.node;
       const { templateKey } = edge.node.frontmatter;
       // The homepage gets created by being a file in the /pages directory
-      if(templateKey == "homePage"){
+      if (templateKey == 'homePage') {
         return null;
       }
       createPage({
         path: edge.node.fields.slug,
-        component: path.resolve(
-          `src/templates/${String(templateKey)}.jsx`
-        ),
+        component: path.resolve(`src/templates/${String(templateKey)}.jsx`),
         // additional data can be passed via context
         context: {
-          id
-        }
+          id,
+        },
       });
     });
   });
@@ -53,7 +51,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     createNodeField({
       node,
       name: `slug`,
-      value: slug
+      value: slug,
     });
   }
 };
@@ -63,15 +61,15 @@ exports.onCreateWebpackConfig = ({ actions }) => {
       modules: [
         path.resolve(__dirname, './src'),
         path.resolve(__dirname, './static'),
-        'node_modules'
+        'node_modules',
       ],
       alias: {
         src: path.resolve(__dirname, 'src/'),
         static: path.resolve(__dirname, 'static/'),
         app: path.resolve(__dirname, 'src/app/'),
-        templates: path.resolve(__dirname, 'src/templates/')
+        templates: path.resolve(__dirname, 'src/templates/'),
       },
-      extensions: ['.js', '.jsx', '.json']
-    }
+      extensions: ['.js', '.jsx', '.json', '.jpg'],
+    },
   });
 };

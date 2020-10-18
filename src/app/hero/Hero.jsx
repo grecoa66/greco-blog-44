@@ -5,7 +5,7 @@ import HeroTitle from 'app/hero/HeroTitle';
 const HeroWrapper = styled.section`
   position: sticky;
   top: 0;
-  z-index: ${props => props.theme.zindex['hero']};
+  z-index: ${(props) => props.theme.zindex['hero']};
   position: relative;
   width: 100%;
   height: 50vh;
