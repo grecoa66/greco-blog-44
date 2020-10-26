@@ -1,15 +1,18 @@
 import React from 'react';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Layout from 'app/Layout';
 import ImageTwoUp from 'app/ImageTwoUp';
+import CardPanel from '../app/CardPanel';
 
 const IndexPage = ({ data }) => {
-  console.log(JSON.stringify(data, null, 2));
+  console.log('pageData', JSON.stringify(data, null, 2));
   const {
     firstName,
     lastName,
     homePagePanels,
+    experiencePanels,
   } = data.allMarkdownRemark.edges[0].node.frontmatter;
   return (
     <Layout>
@@ -27,6 +30,8 @@ const IndexPage = ({ data }) => {
     </Layout>
   );
 };
+
+// <CardPanel panels={experiencePanels} />
 
 IndexPage.propTypes = {
   data: PropTypes.shape({
@@ -51,6 +56,10 @@ export const pageQuery = graphql`
             homePagePanels {
               imgSrc
               imgSide
+              text
+            }
+            experiencePanels {
+              title
               text
             }
           }

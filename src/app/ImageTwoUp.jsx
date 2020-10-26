@@ -65,7 +65,6 @@ const MobileStyledImage = styled.img`
 
 const ImageTwoUp = ({ text, imgSrc, imgSide }) => {
   const isMobile = useMediaQuery('only screen and (max-width: 700px)');
-
   return (
     <>
       {isMobile ? (
@@ -82,7 +81,6 @@ const ImageTwoUp = ({ text, imgSrc, imgSide }) => {
           <DesktopStyledTextContainer imgSide={imgSide}>
             <p>{text}</p>
           </DesktopStyledTextContainer>
-          {console.log(imgSide)}
           <DesktopStyledImageContainer imgSide={imgSide}>
             <DesktopStyledImage src={imgSrc} />
           </DesktopStyledImageContainer>

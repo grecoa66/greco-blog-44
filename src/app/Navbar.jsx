@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import GithubIcon from 'img/github-icon.svg';
+import MailIcon from 'img/mail-logo.svg';
+import PhoneIcon from 'img/phone-logo.svg';
 
 const StyledNav = styled.div`
   display: flex;
@@ -9,45 +12,49 @@ const StyledNav = styled.div`
   align-items: center;
   top: 0;
   height: 10vh;
-  width: 100%;
+  width: 100vw;
   padding: 0 40px;
   position: sticky;
-  z-index: ${(props) => props.theme.zindex['headerFooter']};
-  background-color: ${(props) => props.theme.colors['white']};
+  z-index: ${props => props.theme.zindex['headerFooter']};
+  background-color: ${props => props.theme.colors.lightCream};
 `;
 
-const Logo = styled.p`
-  display: flex;
-  align-items: center;
-  font-size: 36px;
-  color: ${(props) => props.theme.colors['black']};
-  margin: auto;
-  height: 100px;
-
-  left: 50%;
-  position: absolute;
+const Name = styled.p`
+  font-size: 24px;
+  color: ${props => props.theme.colors.black};
 `;
 
-const NavOptions = styled.div`
-  display: block;
+const IconWrapper = styled.section`
+  margin-left: auto;
 `;
 
-const StyledLink = styled(Link)`
-  text-decoration: none;
-  font-size: 20px;
-  color: ${(props) => props.theme.colors['black']};
-  padding: 5px;
+const IconStyling = css`
+  width: 24px;
+  height: 24px;
+  margin: 0 8px;
+`;
+
+const Github = styled(GithubIcon)`
+  ${IconStyling}
+`;
+
+const Phone = styled(PhoneIcon)`
+  ${IconStyling}
+`;
+
+const Mail = styled(MailIcon)`
+  ${IconStyling};
 `;
 
 const Navbar = () => {
   return (
     <StyledNav role="navigation" aria-label="main-navigation">
-      <NavOptions>
-        <StyledLink to="/">Home</StyledLink>
-        <StyledLink to="/resume">Resume</StyledLink>
-        <StyledLink to="/about">About</StyledLink>
-      </NavOptions>
-      <Logo>AKG</Logo>
+      <Name>Alex K. Greco</Name>
+      <IconWrapper>
+        <Github />
+        <Phone />
+        <Mail />
+      </IconWrapper>
     </StyledNav>
   );
 };

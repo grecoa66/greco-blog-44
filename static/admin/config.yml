@@ -33,6 +33,16 @@ collections:
                   },
                 ],
             }
+          - {
+              label: 'Experience Panels',
+              name: 'experiencePanels',
+              widget: 'list',
+              fields:
+                [
+                  { label: 'title', name: 'title', widget: 'string' },
+                  { label: 'text', name: 'text', widget: 'string' },
+                ],
+            }
       # - file: "src/pages/resume/index.md"
       #   label: "Resume"
       #   name: "resume"
