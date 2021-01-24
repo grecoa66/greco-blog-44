@@ -19,6 +19,7 @@ const DesktopStyledTextContainer = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   grid-row: 1;
   grid-column: ${props =>
     props.imgSide == IMG_SIDES.RIGHT ? '2 / span 4' : '8 /span 4'};
@@ -28,7 +29,6 @@ const DesktopStyledImageContainer = styled.section`
   grid-row: 1;
   grid-column: ${props =>
     props.imgSide == IMG_SIDES.RIGHT ? '7 / span 6' : '1 / span 6'};
-  ${props => console.log('styles', props.imgSide)};
 `;
 
 const DesktopStyledImage = styled.img`
@@ -45,11 +45,13 @@ const MobileStyledContainer = styled.section`
 `;
 
 const MobileStyledTextContainer = styled.section`
-  height: 50vh;
+  height: 33vh;
+  padding: 10px;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
 `;
 
 const MobileStyledImageContainer = styled.section`
@@ -63,6 +65,14 @@ const MobileStyledImage = styled.img`
   height: ${containerHeight};
 `;
 
+const StyledText = styled.p`
+  font-size: 22px;
+
+  @media screen and (min-width: 800px) {
+    font-size: 32px;
+  }
+`;
+
 const ImageTwoUp = ({ text, imgSrc, imgSide }) => {
   const isMobile = useMediaQuery('only screen and (max-width: 700px)');
   return (
@@ -70,7 +80,7 @@ const ImageTwoUp = ({ text, imgSrc, imgSide }) => {
       {isMobile ? (
         <MobileStyledContainer>
           <MobileStyledTextContainer>
-            <p>{text}</p>
+            <StyledText>{text}</StyledText>
           </MobileStyledTextContainer>
           <MobileStyledImageContainer>
             <MobileStyledImage src={imgSrc} />
@@ -79,7 +89,7 @@ const ImageTwoUp = ({ text, imgSrc, imgSide }) => {
       ) : (
         <DesktopStyledContainer>
           <DesktopStyledTextContainer imgSide={imgSide}>
-            <p>{text}</p>
+            <StyledText>{text}</StyledText>
           </DesktopStyledTextContainer>
           <DesktopStyledImageContainer imgSide={imgSide}>
             <DesktopStyledImage src={imgSrc} />

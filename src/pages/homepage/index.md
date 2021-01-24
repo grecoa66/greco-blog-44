@@ -7,31 +7,22 @@ homePagePanels:
     {
       imgSrc: 'img/nagy-arnold.jpg',
       imgSide: 'left',
-      text: "Hello! \n I am Alex Greco",
+      text: "Hello! I'm Alex Greco. I'm a software engineer specializing in front-end developement.",
     },
     {
       imgSrc: 'img/ergita-sela.jpg',
       imgSide: 'right',
-      text: 'I build things using Javascript',
-    },
-  ]
-experiencePanels:
-  [
-    {
-      title: 'Javascript',
-      text: "I've worked extensively with Javascript. I have worked on projects using Vanilla, Jquery, React, and Angular. I have also used Node in Express and serverless environments.",
+      text: "I'm passionate about Javascript, CSS, and front-end infrastructure.",
     },
     {
-      title: 'CSS',
-      text: "I've worked with CSS at every turn of my career. I have used many different design libraries and preprocessors over the years including Material UI, Bootstrap, Carbon, and Styled Components",
+      imgSrc: 'img/nicolas-dc.jpg',
+      imgSide: 'left',
+      text: "I've worked extensivly with ES7, Typescript, React, & Styled Components.",
     },
     {
-      title: 'AWS',
-      text: "At Harry's I created and maintained several projects using AWS infrastructure. I've created a real-time data processing pipeline that read streamed Kinesis events and processed them in a Node Lambda.",
-    },
-    {
-      title: 'Terraform',
-      text: "I've used Terraform to templatize AWS infrastructure and used CircleCi to automate Terraform deployments. I created a reusable module to host static Gatsby sites on a Fastly edgee cache.",
+      imgSrc: 'img/flamingo-razor.jpg',
+      imgSide: 'right',
+      text: "I helped bring the Flamingo brand to life in October 2018. I've served as their lead developer since April 2020.",
     },
   ]
 ---
