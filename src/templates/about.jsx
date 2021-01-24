@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import Layout from 'components/base/Layout';
+import Layout from 'app/Layout';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
@@ -31,9 +31,9 @@ const AboutPage = ({ data }) => {
 AboutPage.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.array
-    })
-  })
+      edges: PropTypes.array,
+    }),
+  }),
 };
 
 export default AboutPage;

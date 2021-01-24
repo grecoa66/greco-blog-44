@@ -3,9 +3,9 @@ import styled from 'styled-components';
 import { any } from 'prop-types';
 
 const StyledLayoutContainer = styled.div`
-  background-color: ${props => props.theme.colors['primaryBackground']};
+  background-color: ${(props) => props.theme.colors['white']};
   width: 100%;
-  height:100%;
+  height: 100%;
   min-height: 100vh;
 `;
 
@@ -14,7 +14,7 @@ const StyledLayout = ({ children }) => {
 };
 
 StyledLayout.propTypes = {
-  children: any
+  children: any,
 };
 
 export default StyledLayout;

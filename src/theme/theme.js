@@ -39,7 +39,16 @@ const theme = {
     primaryBackground: '#3AAFA9',
     primaryAccent: '#2B7A78',
     secondaryAccent: '#DEF2F1',
-    darkAccent: '#17252A'
+    darkAccent: '#17252A',
+    ash: '#BABABA',
+    lightAsh: '#CECECE',
+    sky: '#94A8B3',
+    lightSky: '#A9BFC9',
+    cream: '#DCD3C9',
+    lightCream: '#EFE6DC',
+    grey: '#DEDEDE',
+    lightGrey: '#F7F5F7',
+    mint: '#D4E8DC',
   },
   zindex: {
     base: 1,
@@ -48,8 +57,8 @@ const theme = {
     heroContent: 101,
     row: 200,
     block: 300,
-    content: 500
-  }
+    content: 500,
+  },
 };
 
 export default theme;

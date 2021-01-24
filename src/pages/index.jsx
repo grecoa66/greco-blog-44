@@ -1,43 +1,38 @@
 import React from 'react';
+
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
-import Homepage from 'templates/homePage';
-import Layout from 'components/base/Layout';
+import Layout from 'app/Layout';
+import ImageTwoUp from 'app/ImageTwoUp';
+import CardPanel from 'app/CardPanel';
 
-const IndexTemplate = ({ heroText, subHeroText, homepageBlurb }) => {
+const IndexPage = ({ data }) => {
+  const { homePagePanels } = data.allMarkdownRemark.edges[0].node.frontmatter;
   return (
     <Layout>
-      <Homepage
-        key={heroText}
-        heroText={heroText}
-        subHeroText={subHeroText}
-        homepageBlurb={homepageBlurb}
-      />
+      {homePagePanels.map(panel => {
+        const { text, imgSrc, imgSide } = panel;
+        return (
+          <ImageTwoUp
+            key={imgSrc + text}
+            imgSrc={imgSrc}
+            imgSide={imgSide}
+            text={text}
+          />
+        );
+      })}
     </Layout>
   );
 };
 
-const IndexPage = ({ data }) => {
-  const {
-    heroText,
-    subHeroText,
-    homepageBlurb
-  } = data.allMarkdownRemark.edges[0].node.frontmatter;
-  return (
-    <IndexTemplate
-      heroText={heroText}
-      subHeroText={subHeroText}
-      homepageBlurb={homepageBlurb}
-    />
-  );
-};
+// <CardPanel panels={experiencePanels} />
 
 IndexPage.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.array
-    })
-  })
+      edges: PropTypes.array,
+    }),
+  }),
 };
 
 export default IndexPage;
@@ -50,10 +45,10 @@ export const pageQuery = graphql`
       edges {
         node {
           frontmatter {
-            heroText
-            subHeroText
-            homepageBlurb {
-              blurbText
+            homePagePanels {
+              imgSrc
+              imgSide
+              text
             }
           }
         }
