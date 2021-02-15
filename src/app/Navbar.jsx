@@ -22,6 +22,10 @@ const StyledNav = styled.div`
 const Name = styled.p`
   font-size: 24px;
   color: ${props => props.theme.colors.black};
+
+  @media screen and (min-width: 800px) {
+    font-size: 38px;
+  }
 `;
 
 const IconWrapper = styled.section`
