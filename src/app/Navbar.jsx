@@ -55,9 +55,15 @@ const Navbar = () => {
     <StyledNav role="navigation" aria-label="main-navigation">
       <Name>Alex K. Greco</Name>
       <IconWrapper>
-        <Github />
-        <Phone />
-        <Mail />
+        <a href="https://github.com/grecoa66">
+          <Github />
+        </a>
+        <a href="tel:908-268-9044">
+          <Phone />
+        </a>
+        <a href="mailto:alex.k.greco.4@gmail.com">
+          <Mail />
+        </a>
       </IconWrapper>
     </StyledNav>
   );
