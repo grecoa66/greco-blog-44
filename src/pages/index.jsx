@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Layout from 'app/Layout';
 import ImageTwoUp from 'app/ImageTwoUp';
-import CardPanel from 'app/CardPanel';
 
 const IndexPage = ({ data }) => {
   const { homePagePanels } = data.allMarkdownRemark.edges[0].node.frontmatter;
@@ -24,8 +23,6 @@ const IndexPage = ({ data }) => {
     </Layout>
   );
 };
-
-// <CardPanel panels={experiencePanels} />
 
 IndexPage.propTypes = {
   data: PropTypes.shape({

@@ -22,7 +22,7 @@ homePagePanels:
     {
       imgSrc: 'img/flamingo-razor.jpg',
       imgSide: 'right',
-      text: "I helped bring the Flamingo brand to life in October 2018. I've served as their lead developer since April 2020.",
+      text: 'I helped bring the Flamingo brand to life in October 2018.',
     },
   ]
 ---
